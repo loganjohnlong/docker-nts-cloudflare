@@ -16,7 +16,7 @@ function start_container() {
               --detach=true                        \
               --restart=always                     \
               --publish=123:123/udp                \
-	      --env=NOCLIENTLOG=${NOCLIENTLOG}     \
+              --env=NOCLIENTLOG=${NOCLIENTLOG}     \
               --env=LOG_LEVEL=${LOG_LEVEL}         \
               --read-only=true                     \
               --tmpfs=/etc/chrony:rw,mode=1750     \
