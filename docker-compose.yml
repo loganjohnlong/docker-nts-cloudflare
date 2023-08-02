@@ -3,7 +3,7 @@ version: '3.9'
 services:
   ntp:
     build: .
-    image: loganjohnlong/docker-nts-cloudflare:latest
+    image: ghcr.io/loganjohnlong/docker-nts-cloudflare:main
     container_name: nts-cloudflare
     restart: always
     ports:
