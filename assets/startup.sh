@@ -30,7 +30,11 @@ fi
     fi
     echo
     echo "allow all"
+    echo "ntsdumpdir /var/lib/chrony"
 } > ${CHRONY_CONF_FILE}
+
+# Disable synchronization with NTP servers provided by DHCP
+echo "PEERNTP=no" >> ${NETWORK_SYS_CONFIG}
 
 # startup chronyd in the foreground
 exec /usr/sbin/chronyd -u chrony -d -x -L 0
